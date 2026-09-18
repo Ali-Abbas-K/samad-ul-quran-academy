@@ -1,0 +1,12 @@
+{
+  "name": "samad-ul-quran-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Secure Node.js backend for Samad-ul-Qur'an Academy",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}

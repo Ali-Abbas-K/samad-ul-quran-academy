@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Login — Samad-ul-Qur'an Academy</title>
+  <meta name="description" content="Sign in to the Samad-ul-Qur'an Academy teacher portal to manage students, classes and attendance.">
+  <meta name="theme-color" content="#0e6b49">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:site_name" content="Samad-ul-Qur'an Academy">
+  <meta property="og:title" content="Teacher Login — Samad-ul-Qur'an Academy">
+  <meta property="og:description" content="Sign in to the Samad-ul-Qur'an Academy teacher portal to manage students, classes and attendance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <link rel="stylesheet" href="css/parts.css">
+  <noscript><style>
+    /* Scroll-reveal starts at opacity 0 and is faded in by core.js. With
+       JavaScript off there is no observer, so show everything immediately. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+  </style></noscript>
+</head>
+<body class="auth-page" data-page="teacher-login">
+  <aside class="auth-aside">
+    <a class="brand" href="index.html">
+        <img src="assets/logo-mark.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name" data-academy="name">Samad-ul-Qur'an Academy</span>
+          <span class="brand-tag" data-academy="tagline">Online Qur'an Education</span>
+        </span>
+      </a>
+    <div>
+      <p class="eyebrow">Samad-ul-Qur'an Academy</p>
+      <h2>Everything you need for your halaqah</h2>
+      <p>Your assigned students, the class schedule and the attendance register in one workspace.</p>
+      <ul class="value-list mt-5">
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Your assigned students and their courses</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Schedule and reschedule classes</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Mark attendance and write progress notes</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Message students and the academy office</span></li>
+      </ul>
+    </div>
+    <p class="tiny" style="color:rgba(255,255,255,.6)">&copy; <span data-year>2026</span> <span data-academy="name">Samad-ul-Qur'an Academy</span></p>
+  </aside>
+  <main class="auth-main" id="main">
+    <div class="auth-card">
+      <h1>Teacher sign in</h1>
+      <p>Manage your students, schedule classes and mark attendance.</p>
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="field">
+          <label for="l-email">Email address</label>
+          <input class="input" id="l-email" name="email" type="email" required autocomplete="email" autofocus>
+          <span class="error-text"></span>
+        </div>
+        <div class="field">
+          <label for="l-password">Password</label>
+          <div class="input-wrap">
+            <input class="input" id="l-password" name="password" type="password" required autocomplete="current-password">
+            <button type="button" class="password-toggle" aria-label="Show password"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12S18 18.2 12 18.2 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <span class="error-text"></span>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+      </form>
+      <p class="auth-alt">Want to teach with us? <a href="teacher-register.html">Send an application</a></p>
+      <div class="auth-footer-links">
+        <a href="index.html">&larr; Back to website</a>
+        <a href="student-login.html">Student login</a>
+      </div>
+    </div>
+  </main>
+  <script src="js/config.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <g id="star8">
+      <path d="M100 60 L112 88 L140 100 L112 112 L100 140 L88 112 L60 100 L88 88 Z" fill="none" stroke="#d9ae38" stroke-width="1.2"/>
+      <path d="M100 66 L108 92 L134 100 L108 108 L100 134 L92 108 L66 100 L92 92 Z" fill="none" stroke="#d9ae38" stroke-width="0.6" opacity="0.7"/>
+      <rect x="76" y="76" width="48" height="48" fill="none" stroke="#d9ae38" stroke-width="0.9" transform="rotate(45 100 100)"/>
+      <rect x="76" y="76" width="48" height="48" fill="none" stroke="#d9ae38" stroke-width="0.9"/>
+      <circle cx="100" cy="100" r="7" fill="none" stroke="#d9ae38" stroke-width="0.9"/>
+    </g>
+  </defs>
+  <g>
+    <use href="#star8"/>
+    <use href="#star8" x="-100" y="-100"/>
+    <use href="#star8" x="100" y="-100"/>
+    <use href="#star8" x="-100" y="100"/>
+    <use href="#star8" x="100" y="100"/>
+    <path d="M0 0 L200 200 M200 0 L0 200" stroke="#d9ae38" stroke-width="0.4" opacity="0.4"/>
+    <path d="M100 0 L100 200 M0 100 L200 100" stroke="#d9ae38" stroke-width="0.4" opacity="0.25"/>
+  </g>
+</svg>

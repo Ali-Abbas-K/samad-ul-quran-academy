@@ -1,0 +1,33 @@
+plugins { id 'com.android.application' }
+
+android { signingConfigs {
+    debug {
+        storeFile file(SAMAD_WEB_URL)
+        storePassword SAMAD_WEB_URL
+        keyAlias SAMAD_WEB_URL
+        keyPassword SAMAD_WEB_URL
+    }
+}
+    namespace 'com.samadulquran.app'; compileSdk 36
+    defaultConfig { applicationId 'com.samadulquran.app'; minSdk
+        targetSdk 36; versionCode 1; versionName '1.0.0'
+        buildConfigField 'String', 'WEB_URL', '"' + (project.findProperty('SAMAD_WEB_URL') ?: 'https://YOUR-SAMAD-DOMAIN.example') + '"'
+        // Only used by the bundled build. The pages in assets/site are served
+        // from https://appassets.androidplatform.net, which cannot infer where
+        // the API lives. Set SAMAD_API_BASE_URL in gradle.properties (or
+        // -PSAMAD_API_BASE_URL=https://your-domain/api) if you ship the bundled
+        // site instead of pointing SAMAD_WEB_URL at the live domain, and add
+        // https://appassets.androidplatform.net to ALLOWED_ORIGINS in server/.env.
+        buildConfigField 'String', 'API_BASE_URL', '"' + (project.findProperty('SAMAD_API_BASE_URL') ?: '') + '"'
+    }
+    buildFeatures { buildConfig true }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildToolsVersion '36.0.0'
+    dependenciesInfo {
+    }
+}
+
+dependencies { implementation 'androidx.appcompat:appcompat:1.7.1'; implementation 'androidx.webkit:webkit:1.17.0' }

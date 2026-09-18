@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrator — Samad-ul-Qur'an Academy</title>
+  <meta name="description" content="Administrator sign-in for the Samad-ul-Qur'an Academy management system.">
+  <meta name="theme-color" content="#0e6b49">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:site_name" content="Samad-ul-Qur'an Academy">
+  <meta property="og:title" content="Administrator — Samad-ul-Qur'an Academy">
+  <meta property="og:description" content="Administrator sign-in for the Samad-ul-Qur'an Academy management system.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <link rel="stylesheet" href="css/parts.css">
+  <noscript><style>
+    /* Scroll-reveal starts at opacity 0 and is faded in by core.js. With
+       JavaScript off there is no observer, so show everything immediately. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+  </style></noscript>
+</head>
+<body class="auth-page" data-page="admin-login">
+  <aside class="auth-aside">
+    <a class="brand" href="index.html">
+        <img src="assets/logo-mark.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name" data-academy="name">Samad-ul-Qur'an Academy</span>
+          <span class="brand-tag" data-academy="tagline">Online Qur'an Education</span>
+        </span>
+      </a>
+    <div>
+      <p class="eyebrow">Samad-ul-Qur'an Academy</p>
+      <h2>Academy administration</h2>
+      <p>Admissions, students, teachers, classes, attendance, fee verification and website content.</p>
+      <ul class="value-list mt-5">
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Approve admissions and assign teachers</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Verify fee payments and issue receipts</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Run the monthly billing and suspension check</span></li>
+            <li class="value-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></svg><span>Manage courses, gallery, testimonials and settings</span></li>
+      </ul>
+    </div>
+    <p class="tiny" style="color:rgba(255,255,255,.6)">&copy; <span data-year>2026</span> <span data-academy="name">Samad-ul-Qur'an Academy</span></p>
+  </aside>
+  <main class="auth-main" id="main">
+    <div class="auth-card">
+      <h1>Administrator sign in</h1>
+      <p>Enter the administrator key issued by the academy.</p>
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="field">
+          <label for="l-key">Administrator key</label>
+          <div class="input-wrap">
+            <input class="input" id="l-key" name="key" type="password" required autocomplete="off" autofocus>
+            <button type="button" class="password-toggle" aria-label="Show key"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12S18 18.2 12 18.2 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <span class="help">The key is configured on the server as <code>ADMIN_KEY</code>. It is never stored in the browser in plain text beyond this session.</span>
+          <span class="error-text"></span>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="4.5"/><path d="m11.8 11.8 8.2 8.2M16.5 16.5l2-2M19 19l1.5-1.5"/></svg> Sign in</button>
+      </form>
+      <div class="alert alert-warning mt-5"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.3 3 7.9 7 9 4-1.1 7-4.7 7-9V6l-7-3Z"/></svg><div><strong>Restricted area</strong>Sign-in attempts are rate limited and written to the audit log with the requesting IP address.</div></div>
+      <div class="auth-footer-links">
+        <a href="index.html">&larr; Back to website</a>
+        <a href="student-login.html">Student login</a>
+      </div>
+    </div>
+  </main>
+  <script src="js/config.js" defer></script>
+  <script src="js/core.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

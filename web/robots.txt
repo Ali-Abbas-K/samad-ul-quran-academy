@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /student-dashboard.html
+Disallow: /teacher-dashboard.html
+Disallow: /payments.html
+Disallow: /classes.html
+Disallow: /classroom.html
+Disallow: /chat.html
+Disallow: /attendance.html
+Disallow: /notifications.html
+Disallow: /profile.html
+Disallow: /teacher-students.html
+Disallow: /api/
+
+Sitemap: https://samadulquran.com/sitemap.xml
