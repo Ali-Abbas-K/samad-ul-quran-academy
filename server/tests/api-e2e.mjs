@@ -13,7 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const BASE = (process.argv[2] || 'http://127.0.0.1:8080').replace(/\/$/, '');
+const BASE = (process.argv[2] || 'https://samad-ul-quran-academy-1.onrender.com').replace(/\/$/, '');
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..');
 
 function envValue(key) {

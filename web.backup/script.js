@@ -1,4 +1,4 @@
-const API=(window.SAMAD_API_BASE||(location.protocol==='file:'?'http://127.0.0.1:8080/api':'/api')), $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const API=(window.SAMAD_API_BASE||(location.protocol==='file:'?'https://samad-ul-quran-academy-1.onrender.com/api':'/api')), $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const token=()=>localStorage.getItem('samadToken')||'', user=()=>{try{return JSON.parse(localStorage.getItem('samadUser')||'null')}catch{return null}};
 const esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const money=n=>'PKR '+Number(n||0).toLocaleString(), initials=n=>(String(n||'?').trim()[0]||'?').toUpperCase();
