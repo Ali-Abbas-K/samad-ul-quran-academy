@@ -6,12 +6,7 @@
 
 /* --------------------------------------------------------------- config --- */
 
-const API = (() => {
-  if (typeof window.SAMAD_API_BASE === 'string' && window.SAMAD_API_BASE) return window.SAMAD_API_BASE;
-  if (location.protocol === 'file:') return 'https://samad-ul-quran-academy-1.onrender.com/api';
-  return '/api';
-})();
-
+const API = 'https://samad-ul-quran-academy-1.onrender.com/api';
 const PK_TZ = 'Asia/Karachi';
 
 /* -------------------------------------------------------------- storage --- */
