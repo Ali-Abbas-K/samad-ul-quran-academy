@@ -28,8 +28,8 @@ function loadDotEnv(file) {
 loadDotEnv(path.join(ROOT, 'server', '.env'));
 
 export const PORT = Number(process.env.PORT || 8080);
-export const HOST = process.env.HOST || '0.0.0.0';
 export const NODE_ENV = process.env.NODE_ENV || 'development';
+export const HOST = process.env.HOST || (NODE_ENV === 'production' ? '0.0.0.0' : '127.0.0.1');
 
 const INSECURE_SECRET = 'CHANGE_THIS_SECRET_BEFORE_DEPLOYMENT';
 const INSECURE_ADMIN_KEY = 'CHANGE_THIS_ADMIN_KEY_BEFORE_DEPLOYMENT';

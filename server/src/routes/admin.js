@@ -42,7 +42,7 @@ export default {
       pendingAmount: db.prepare("SELECT COALESCE(SUM(amount),0) n FROM payments WHERE status='pending'").get().n,
     };
     const attendance = db.prepare(
-      `SELECT status, COUNT(*) n FROM attendance WHERE marked_at >= date('now','-30 day') GROUP BY status`,
+      `SELECT status, COUNT(*) n FROM attendance WHERE marked_at >= CURRENT_TIMESTAMP - INTERVAL '30 days' GROUP BY status`,
     ).all();
     return ok(ctx, {
       month,
@@ -858,7 +858,7 @@ export default {
     return ok(ctx, {
       settings: allSettings(),
       keys: Object.keys(DEFAULT_SETTINGS),
-      paymentMethods: db.prepare('SELECT * FROM payment_methods ORDER BY rowid').all(),
+      paymentMethods: db.prepare('SELECT * FROM payment_methods ORDER BY code').all(),
       config: configStatus(),
     });
   },
@@ -896,7 +896,7 @@ export default {
       .run(d.enabled === undefined ? row.enabled : (d.enabled ? 1 : 0),
         clean(d.instructions ?? row.instructions, 1000), clean(d.accountDetail ?? row.account_detail, 300), row.code);
     log('admin', 'payment_method_updated', row.code);
-    return ok(ctx, { methods: db.prepare('SELECT * FROM payment_methods ORDER BY rowid').all() });
+    return ok(ctx, { methods: db.prepare('SELECT * FROM payment_methods ORDER BY code').all() });
   },
 
   'GET /api/admin/config-status': (ctx) => {

@@ -30,7 +30,7 @@ export function paymentInstructions() {
 }
 
 export function enabledMethods() {
-  return db.prepare('SELECT code,name,enabled,instructions,account_detail FROM payment_methods WHERE enabled=1 ORDER BY rowid').all()
+  return db.prepare('SELECT code,name,enabled,instructions,account_detail FROM payment_methods WHERE enabled=1 ORDER BY code').all()
     .map((m) => ({ ...m, gateway: gatewayConfigured(m.code) }));
 }
 

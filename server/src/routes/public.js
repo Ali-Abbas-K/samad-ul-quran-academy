@@ -39,7 +39,7 @@ export default {
   'GET /api/public/settings': (ctx) => ok(ctx, {
     academy: academy(),
     social: social(),
-    paymentMethods: db.prepare('SELECT code,name,enabled FROM payment_methods ORDER BY rowid').all(),
+    paymentMethods: db.prepare('SELECT code,name,enabled FROM payment_methods ORDER BY code').all(),
     gateways: { easypaisa: gatewayConfigured('easypaisa'), jazzcash: gatewayConfigured('jazzcash') },
   }),
 
