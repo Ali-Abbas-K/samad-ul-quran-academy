@@ -4,9 +4,14 @@
   "private": true,
   "type": "module",
   "description": "Secure Node.js backend for Samad-ul-Qur'an Academy",
-  "engines": { "node": ">=22.5.0" },
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
   }
 }
