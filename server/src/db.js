@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS receipts(
   FOREIGN KEY(payment_id) REFERENCES payments(id)
 );
 
--- Added in this upgrade (new tables only; nothing existing is dropped)
+-- Added in this upgrade (new tables only, nothing existing is dropped)
 CREATE TABLE IF NOT EXISTS gallery(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT DEFAULT '',
@@ -471,3 +471,4 @@ export function withMethodLabel(rows) {
     : r);
   return Array.isArray(rows) ? rows.map(one) : one(rows);
 }
+
